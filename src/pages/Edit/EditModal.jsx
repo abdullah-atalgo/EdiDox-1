@@ -12,7 +12,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.vers
 function EditModal({ isOpen, setIsOpen, id }) {
   const location = useLocation();
   const navigate = useNavigate();
-  const scrollContainerRef = useRef(null); // Container reference for Observer
+  const scrollContainerRef = useRef(null); 
 
   // States
   const [content, setContent] = useState("");
@@ -148,7 +148,7 @@ function EditModal({ isOpen, setIsOpen, id }) {
       },
       {
         threshold: 0.6,
-        root: scrollContainerRef.current, // Use ref instead of document.querySelector
+        root: scrollContainerRef.current, 
       }
     );
 
@@ -156,7 +156,7 @@ function EditModal({ isOpen, setIsOpen, id }) {
     pages.forEach((page) => observer.observe(page));
 
     return () => observer.disconnect();
-  }, [numPages, extension, scale, isOpen]); // Re-run when scale changes or modal opens
+  }, [numPages, extension, scale, isOpen]); 
 
   if (!isOpen) return null;
 
