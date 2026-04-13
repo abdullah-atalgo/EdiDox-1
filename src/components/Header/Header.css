@@ -1,0 +1,88 @@
+/* --- YOUR ORIGINAL DOCS CSS (STAYS 100% SAME) --- */
+.editor-header {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  background-color:#DADBDE;
+  border-bottom: 1px solid #e5e7eb;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.toolbar-left.ql-toolbar { padding: 0; border: none; background: transparent; }
+.toolbar-left select { padding: 4px 6px; font-size: 13px; border: 1px solid #d1d5db; border-radius: 4px; background-color: #ffffff; cursor: pointer; }
+.toolbar-left button { padding: 5px 8px; font-size: 13px; border: none; background: transparent; border-radius: 4px; cursor: pointer; }
+.toolbar-left button:hover { background-color: #e5e7eb; }
+.toolbar-right { display: flex; align-items: center; }
+
+.edit-toggle-btn, .export-btn, .close-btn {
+  font-size: 13px;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+}
+
+.word-count { margin: 5px; font-size: 13px; }
+
+
+/* --- PDF VIEW SPECIFIC OVERRIDES --- */
+.editor-header.pdf-view {
+  background-color: #252526; 
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+
+.pdf-controls-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+
+.editor-header.pdf-view .toolbar-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto; 
+  z-index: 2; 
+}
+.pdf-btn{
+  background-color: transparent;
+  border: none ;
+  color :white;
+  /* padding: 6px 10px; */
+  cursor: pointer;
+}
+.pdf-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 5px;
+}
+.page-info{
+  padding-bottom: 10px;
+}
+.editor-header.pdf-view .export-btn, 
+.editor-header.pdf-view .close-btn {
+  color: white; 
+  background: transparent;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.editor-header.pdf-view .close-btn:hover,
+.editor-header.pdf-view .export-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1); 
+}
